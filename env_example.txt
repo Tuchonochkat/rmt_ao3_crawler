@@ -1,0 +1,17 @@
+# Скопируйте этот файл как .env и заполните своими данными
+
+# AO3 Credentials
+AO3_USERNAME=your_username
+AO3_PASSWORD=your_password
+
+# Telegram Bot Configuration
+TELEGRAM_BOT_TOKEN=your_bot_token
+TELEGRAM_CHANNEL_ID=your_channel_id
+
+# Search Configuration
+SEARCH_TAGS=tag1,tag2,tag3
+SEARCH_FANDOMS=fandom1,fandom2
+
+# Crawler Settings
+REQUEST_DELAY=20
+MAX_WORKS_PER_RUN=10
