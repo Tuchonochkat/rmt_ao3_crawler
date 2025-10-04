@@ -15,7 +15,8 @@ class Config:
     TELEGRAM_CHANNEL_ID = os.getenv("TELEGRAM_CHANNEL_ID")
 
     # Search Configuration - только фандомы, теги убраны
-    SEARCH_FANDOMS = ["Russian Musical Theatre RPF"]
+    SEARCH_FANDOMS = ["Икар - Круглов/Макуни | Icarus - Kruglov/Makuni"]
+    # "Russian Musical Theatre RPF"
 
     # Crawler Settings
     REQUEST_DELAY = int(os.getenv("REQUEST_DELAY", "20"))
@@ -36,4 +37,4 @@ class Config:
     ]
 
     # Tags with "/" that should NOT go to relationships (exceptions)
-    RELATIONSHIP_EXCEPTIONS = ["Rape/Non-Con", "Hurt/Comfort"]
+    RELATIONSHIP_EXCEPTIONS = ["Rape/Non", "Hurt/Comfort", "Parent/Child"]

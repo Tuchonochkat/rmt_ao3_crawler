@@ -24,9 +24,7 @@ def setup_logging():
 def load_works_from_json():
     """Загружает работы из JSON файла"""
     try:
-        with open(
-            "improved_search_Russian Musical Theatre RPF.json", "r", encoding="utf-8"
-        ) as f:
+        with open("improved_search.json", "r", encoding="utf-8") as f:
             works = json.load(f)
         print(f"📚 Загружено {len(works)} работ из JSON")
         return works

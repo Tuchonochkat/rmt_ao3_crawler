@@ -378,7 +378,12 @@ class ImprovedCrawler:
                 for tag in all_tags:
                     if tag in Config.WARNING_TAGS:
                         warnings.append(tag)
-                    elif "/" in tag and tag not in Config.RELATIONSHIP_EXCEPTIONS:
+                    elif "/" in tag and all(
+                        [
+                            exception_item not in tag
+                            for exception_item in Config.RELATIONSHIP_EXCEPTIONS
+                        ]
+                    ):
                         relationships.append(tag)
                     else:
                         tags.append(tag)
@@ -589,7 +594,7 @@ class ImprovedCrawler:
 
             # Сохраняем результаты
             if works:
-                filename = f"improved_search_{'_'.join(fandoms)}.json"
+                filename = "improved_search.json"
                 self.save_results(works, filename)
 
             return works
